@@ -1,7 +1,10 @@
-obx:
+jobx:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Velocity deployment
-        uses: codeclimate/velocity-deploy-action@master
-      - name: verification of node version
-        run: node --version
+steps:
+- uses: actions/checkout@v2
+- uses: actions/setup-node@v2
+  with:
+    node-version: '14'
+- run: npm install
+- run: npm test
