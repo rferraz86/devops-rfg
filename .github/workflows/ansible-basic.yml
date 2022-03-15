@@ -5,6 +5,7 @@ on: workflow_dispatch
 jobs:
   ansible-ping:
     runs-on: ubuntu-latest
+    run: ls la
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
